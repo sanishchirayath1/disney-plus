@@ -14,6 +14,7 @@ const menuItems = ["home", "search", "watchlist", "originals", "movies", "series
 
 const MenuDomEls = menuItems.map(item => {
     return <MenuItem 
+            key={item}
             href="#" 
             text={item.toUpperCase()} 
             src={"/images/" + item + "-icon.svg"}

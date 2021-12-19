@@ -1,6 +1,8 @@
 nav {
   height: 70px;
-  background-color: #090b13;
+  /* background: linear-gradient(to bottom, #192133, #111826); */
+  background: #040714;
+  color: rgba(255, 255, 255, 0.8);
   display: flex;
   align-items: center;
   padding: 0 36px;
@@ -25,13 +27,14 @@ nav {
 .nav-menu-item {
   display: flex;
   align-items: center;
-  margin-right: 1rem;
+  margin-right: 2rem;
   cursor: pointer;
 }
 
 .nav-menu-item > img {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  margin-right: 0.3rem;
+  opacity: 0.8;
 }
 .nav-menu-item > span {
   letter-spacing: 0.1rem;
