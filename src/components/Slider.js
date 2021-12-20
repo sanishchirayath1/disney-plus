@@ -42,16 +42,14 @@ function Slider() {
 
     
     return (
-        <div className="slider-wrapper-container">
             <div className='slider-wrapper'>
                 <ul className='slider' style={{ transform: `translate3d(${-activeSlide * 100}%, 0, 0)` }}>
                     {sliderImages.map((src, index) => (
                         <SliderItem src={src} key={index} />
                     ))}
                     {/* <SliderItem src={sliderImages[activeSlide]}/> */}          
-                </ul>    
-            </div>
-            <div className="slider-dots">
+                </ul>  
+                <div className="slider-dots">
                 {sliderImages.map((src, index) => (
                     <span
                         key={index}
@@ -79,8 +77,9 @@ function Slider() {
                         setActiveSlide(activeSlide + 1)
                     }
                 }}>&#10095;
-            </span>
-        </div>
+            </span>  
+            </div>
+        
         
     )
 }
