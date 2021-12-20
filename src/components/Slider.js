@@ -42,33 +42,45 @@ function Slider() {
 
     
     return (
-        <>
-            <ul className='slider' >
-                <SliderItem src={sliderImages[activeSlide]}/>
-                <div className='slider-dots'>
-                    <span className={`slider-dot ${activeSlide === 0 && "active"}`}></span>
-                    <span className={`slider-dot ${activeSlide === 1 && "active"}`}></span>
-                    <span className={`slider-dot ${activeSlide === 2 && "active"}`}></span>
-                    <span className={`slider-dot ${activeSlide === 3 && "active"}`}></span>
-                </div>
-                <span className='slider-prev slider-btn' onClick={() => {
+        <div className="slider-wrapper-container">
+            <div className='slider-wrapper'>
+                <ul className='slider' style={{ transform: `translate3d(${-activeSlide * 100}%, 0, 0)` }}>
+                    {sliderImages.map((src, index) => (
+                        <SliderItem src={src} key={index} />
+                    ))}
+                    {/* <SliderItem src={sliderImages[activeSlide]}/> */}          
+                </ul>    
+            </div>
+            <div className="slider-dots">
+                {sliderImages.map((src, index) => (
+                    <span
+                        key={index}
+                        className={`slider-dot ${activeSlide === index ? "active" : ""}`}
+                        onClick={() => setActiveSlide(index)}
+                    />
+                ))}
+            </div>
+            <span 
+                className='slider-prev slider-btn' 
+                onClick={() => {
                     if(activeSlide === 0) {
                         setActiveSlide(sliderImages.length - 1)
                     } else {
                         setActiveSlide(activeSlide - 1)
                     }
-                }}>&#10094;</span>
-                <span className='slider-next slider-btn' onClick={() => {
+                }}>&#10094;
+            </span>
+            <span 
+                className='slider-next slider-btn' 
+                onClick={() => {
                     if(activeSlide === sliderImages.length - 1) {
                         setActiveSlide(0)
                     } else {
                         setActiveSlide(activeSlide + 1)
                     }
-                }}>&#10095;</span>
-              
-            </ul>
-           
-            </>
+                }}>&#10095;
+            </span>
+        </div>
         
     )
 }

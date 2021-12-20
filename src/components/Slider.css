@@ -1,41 +1,61 @@
+.slider-wrapper-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.slider-wrapper {
+  /* overflow: hidden; */
+}
+
 .slider {
   width: 100%;
   padding-top: 1rem;
   display: flex;
   flex-direction: row;
-  position: relative;
+  transition: ease 1000ms;
 }
-.slider-btn{
-    transform: translateY(-50%);
-    width: 1.5rem;
-    height: 1.5rem;
-    font-size: 0.7rem;
-    border-radius: 50%;
-    background-color: rgba(256,256,256,0.4);
-    color: black;
-    cursor: pointer;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.slider-btn {
+  transform: translateY(-50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 0.7rem;
+  border-radius: 50%;
+  background-color: rgba(256, 256, 256, 0.4);
+  color: black;
+  cursor: pointer;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider-btn:hover {
+  background-color: rgba(256, 256, 256, 0.6);
 }
 .slider-prev {
-    position: absolute;
-    left: -10px;
-    top: 50%;
+  position: absolute;
+  left: -32px;
+  top: 50%;
 }
 .slider-next {
-    position: absolute;
-    right: -10px;
-    top: 50%;
+  position: absolute;
+  right: -32px;
+  top: 50%;
 }
-
+/* slider item to slide from right to left */
 
 .slider-item {
   min-width: 100%;
+  border: transparent solid 4px;
   list-style: none;
+  border-radius: 5px;
   box-shadow: rgb(0 0 0 /69%) 0px 26px 30px -10px,
-    rgb(0 0 0 /73%) 0px 16px 10px -10px;
+  rgb(0 0 0 /73%) 0px 16px 10px -10px;
+}
+/* silder item on hover border and ease in */
+.slider-item:hover {
+  border: #fff solid 4px;
+  transition: all 0.4s ease-in-out;
 }
 
 .slider-item > img {
@@ -62,9 +82,13 @@
   height: 10px;
   border-radius: 50%;
   background-color: #fff;
-  margin: 0 5px;
+  margin: 0 15px;
   cursor: pointer;
   opacity: 0.3;
+}
+
+.slider-dot:hover {
+  opacity: 0.6;
 }
 .active {
   opacity: 1;
