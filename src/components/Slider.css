@@ -42,7 +42,7 @@
 
 .slider-item {
   min-width: 100%;
-  border: transparent solid 4px;
+  border: transparent solid 3px;
   list-style: none;
   border-radius: 5px;
   box-shadow: rgb(0 0 0 /69%) 0px 26px 30px -10px,
@@ -50,8 +50,8 @@
 }
 /* silder item on hover border and ease in */
 .slider-item:hover {
-  border: #fff solid 4px;
-  transition: all 0.4s ease-in-out;
+  border: #fff solid 3px;
+  transition: all 0.2s ease-in-out;
 }
 
 .slider-item > img {
