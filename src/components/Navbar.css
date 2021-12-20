@@ -22,11 +22,14 @@ nav {
   display: flex;
   align-items: center;
   margin-left: 3rem;
+  margin-right: auto;
 }
 
 .nav-menu > a {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
 }
 
 .nav-menu-item {
@@ -60,6 +63,5 @@ nav {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  margin-left: auto;
   cursor: pointer;
 }

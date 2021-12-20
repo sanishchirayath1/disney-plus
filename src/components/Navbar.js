@@ -42,7 +42,10 @@ function Navbar() {
             <ul className='nav-menu'>
                 {MenuDomEls}
             </ul>
-            <img className="navbar-profile-photo"src="https://avatars.githubusercontent.com/u/46041082?v=4" alt=""/>
+            <Link to="/login">
+                <img className="navbar-profile-photo"src="https://avatars.githubusercontent.com/u/46041082?v=4" alt=""/>
+            </Link>
+            
         </nav>
     )
 }
