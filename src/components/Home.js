@@ -5,6 +5,7 @@ import Viewers from './Viewers'
 import Movies from './Movies'
 
 function Home() {
+      
     return (
         <div>
             <main className="home">

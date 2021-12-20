@@ -24,6 +24,11 @@ nav {
   margin-left: 3rem;
 }
 
+.nav-menu > a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+}
+
 .nav-menu-item {
   display: flex;
   align-items: center;
