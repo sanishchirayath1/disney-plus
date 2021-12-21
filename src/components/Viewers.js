@@ -49,6 +49,7 @@ const Wrap = styled.div`
     width: 100%;
     height: 100%;
     position: absolute;
+    object-fit: cover;
     top: 0;
     left:0;
     opacity: 0;
